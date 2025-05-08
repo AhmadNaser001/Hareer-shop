@@ -14,7 +14,7 @@ This project showcases a clean, responsive layout suitable for online fashion or
 
 - HTML
 - CSS
-  JS
+- JS
 
 ## 📸 Preview
 
