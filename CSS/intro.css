@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root{
+  --main-color: #83b9a4;
+  --body-color: #e9d5b680;
+  --button-color: #4a8f8f;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--body-color);
+}
+/* =========================================Global Styles =====================================*/
+button.normal{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color:#fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+button.white{
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #fff;
+  background-color:transparent;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 0.2s;
+}
+/* =====================================End Global Rules===================================== */
+
+/* =====================================Start Scroll Bar==================================== */
+::-webkit-scrollbar{
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(220, 8%, 76%);
+}
+::-webkit-scrollbar-thumb{
+  border-radius: .6rem;
+  background-color: hsl(220, 8%, 64%);
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(220, 8%, 54%);
+}
+/* ========================================End Scroll Bar ================================*/
+
+/* ==========================================Start.header===============================*/
+.header {
+  padding: 15px 40px;
+  background-color:#f5e1c6 ;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px #635c5c;
+  -moz-box-shadow: 0 0 10px #635c5c;
+  box-shadow: 0 0 10px #635c5c;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.header .container .logo a {
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  color: var(--main-color);
+  align-items: center;
+  text-shadow: 1px 1px 2px #3c5b4f;
+
+}
+.header .container .icouns{
+  padding-left: 20px;
+}
+.header .container .icouns i{
+  font-size: 22px;
+  padding-left: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 621px) {
+  .header .container .search-data{
+    width: 250px;
+  }
+  .header .container .search-data input{
+    font-size: 14px;
+    }
+}
+@media (max-width: 842px) {
+  .header .container .search-data{
+    width: 250px;
+  }
+}
+@media (max-width: 626px) {
+  .header .container .search-data{
+    display: none;
+  }
+}
+
+/*====================================================End header====================================== */
+
+/*====================================================Start landing====================================== */
+.landing {
+  position: relative;
+  padding: 20px 40px;
+  overflow: hidden;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 280px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transform: skewY(50deg);
+  transform-origin: top left;
+}
+.landing::after {
+  content: "";
+  position: absolute;
+  right:-160px;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transform: skewX(-15deg);
+  transform-origin: top right;
+}
+.landing .container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.landing .text {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .landing .text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.landing .text h1 {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: -2px;
+  color: #f78c2a;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #7b4b1f;
+}
+@media (max-width: 767px) {
+  .landing .text h1 {
+    font-size: 28px;
+  }
+}
+.landing .text p {
+  font-size: 23px;
+  line-height: 1.7;
+  margin: 5px 0 0;
+  color: #666;
+  max-width: 500px;
+  padding-bottom: 10px;
+}
+@media (max-width: 991px) {
+  .landing .text p {
+    margin: 10px auto;
+  }
+}
+@media (max-width: 767px) {
+  .landing .text p {
+    font-size: 18px;
+  }
+}
+.landing .image img {
+  position: relative;
+  width: 700px;
+}
+@media (max-width: 991px) {
+  .landing .image {
+    display: none;
+  }
+}
+.search-data {
+  border: 0;
+  border-inline: none;
+  background-color: transparent;
+}
+.search-data{
+  position: relative;
+  height: 50px;
+  width: 400px;
+  display: flex;
+  text-align: center;
+}
+.search-data input{
+  height: 100%;
+  width: 100%;
+  background: #fefdf7;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  color:#666;
+  padding: 10px 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.search-data input::placeholder {
+  color: #666;
+}
+.search-data span{
+  color: white;
+  width: 50px;
+  font-size: 20px;
+  right: 0;
+  top: 0;
+  line-height: 45px;
+  cursor: pointer;
+  background-color: #4a8f8f;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+.landing .container .text .buttons input,
+.landing .container .text .buttons button{
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 100px;
+  background-color:#fefdf7 ;
+  font-size: 15px;
+  color: #4a8f8f ;
+  font-weight: 800;
+  border: none;
+  width: 180px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.landing .container .text .buttons input:hover{
+  box-shadow: 20px 20px 30px rgb(0,0,0, 0.06);
+}
+.landing .container .text .buttons button{
+  background-color:var(--button-color) ;
+  font-weight: 700;
+  margin: 20px;
+  
+}
+.landing .container .text .buttons button a{
+  
+  color: #faf2e2 ;
+}
+/* =================================================End landing ==============================*/
+
+/* =================================================Start Categories =========================*/
+.categories{
+  padding: 40px 80px;
+  min-height: calc(100vh + 20px);
+  text-align: center;
+
+}
+.categories h2{
+  font-size: 46px;
+  line-height: 54px;
+  color: #333;
+}
+.categories p{
+  font-size: 16px;
+  color: #6f6f6f;
+  margin: 15px 0 20px 0;
+}
+.categories .container p{
+  font-size: 16px;
+  color: #000;
+  margin: 15px 0 20px 0;
+}
+.categories .container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center; 
+  align-items: center;  
+  gap: 20px 130px;
+}
+.categories .container .card{
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 500px;
+  border: 1px solid #cce7d0;
+  transition: 0.2s ease;
+  background-color: #d2e8e09d;
+}
+.categories .container .card:hover{
+  box-shadow: 20px 20px 30px rgb(0,0,0, 0.06);
+}
+.categories .container .card img{
+  width: 150px;
+  height: 200px;
+  background-color: #a8c2b89d;
+}
+/* =====================================================End Categories =======================================================*/
+
+
+/* =====================================================Start Fetured Products ===============================================*/
+.fetured-products{
+  text-align: center;
+  padding: 40px 80px;
+  min-height: calc(100vh + 20px);
+}
+.fetured-products h2{
+  font-size: 46px;
+  line-height: 54px;
+  color: #333;
+}
+.fetured-products p{
+  font-size: 16px;
+  color: #6f6f6f;
+  margin: 15px 0 20px 0;
+}
+.pro-conteiner{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+.fetured-products .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #85af9e;
+  border-radius:25px;
+  box-shadow: 20px 20px 30px rgb(0,0,0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+  cursor: pointer;
+}
+.fetured-products .pro:hover{
+  box-shadow: 20px 20px 30px rgb(0,0,0, 0.06);
+}
+.fetured-products .pro img{
+  width: 100%;
+  border-radius:20px;
+}
+.fetured-products .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+.fetured-products .pro .des span{
+  color: #606063;
+  font-size: 12px;
+}
+.fetured-products .pro .des h5{
+  padding-top:7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+.fetured-products .pro .des i{
+  font-size: 12px;
+  color: rgb(243, 181 ,25);
+}
+.fetured-products .pro .des h4{
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+.fetured-products .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+
+/* ===============================================End Fetured Products ==================================*/
+
+/*======================================================== Start Banner ================================*/
+.banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../image/banner/b2.jpg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+.banner h4{
+  color: #fff;
+  font-size: 16px;
+}
+.banner h2{
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0 ;
+}
+.banner h2 span{
+  color: #ef3636;
+}
+.banner button:hover{
+  background: #088178;
+  color: #fff;
+}
+/* =================================================End Banner =========================================*/
+
+/* ================================================Start Sm Bbanner==================================== */
+.sm-banner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 80px;
+}
+.sm-banner .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(../image/banner/image2.jpg);
+  min-width: 670PX ;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+.sm-banner .banner-box2{
+  background-image: url(../image/banner/b10.jpg);
+}
+.sm-banner h4{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+.sm-banner h2{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+}
+.sm-banner span{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.sm-banner .banner-box:hover button{
+  background: #088178;
+  border: 1px solid #088178;
+}
+/* ================================================End Sm Bbanner==================================== */
+
+/*================================================= Start Banner 2 ====================================== */
+.banner2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+.banner2 .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(../image/banner/image3.jpg);
+  min-width: 30% ;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20PX;
+}
+.banner2 h2{
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+}
+.banner2 h3{
+  color: #ec544e;
+  font-weight: 800;
+  font-size: 15px;
+}
+.banner2 .banner-box2{
+  background-image: url(../image/banner/image4.jpg);
+}
+.banner2 .banner-box3{
+  background-image: url(../image/banner/b16.jpg);
+}
+/*================================================= End Banner 2 ====================================== */
+
+/*============================================= Start Breands======================================= */
+.brand_container{
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: center;
+  column-gap: 3.25rem;
+  margin-bottom:2rem;
+}
+.brand_title{
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 85px;
+}
+.brand_img{
+  width:120px;
+}
+.brand_img:nth-child(even){
+  margin-top:2rem;
+  margin-bottom:2rem;
+}
+/*============================================= End Breands ======================================= */
+/*============================================= Start Footer ======================================= */
+footer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color:var(--body-color);
+  padding: 40px 80px;
+    position: relative;
+  -webkit-box-shadow: 0 0 10px #635c5c;
+  -moz-box-shadow: 0 0 10px #635c5c;
+  box-shadow: 0 0 10px #635c5c;
+}
+footer .col{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+.logo {
+  font-size: 25px;
+}
+.logo a{
+  font-size: 40px;
+  color: #333;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+footer h4{
+	font-size: 14px;
+	padding-bottom: 20px;
+	color: #333;
+}
+footer p{
+	font-size: 13px;
+	margin: 0 0 8px 0;
+}
+footer a{
+	font-size: 13px;
+	color: #898e8b;
+	margin-bottom:10px;
+}
+footer .follow i{
+	color: #898e8b;
+	padding-right:8px;
+	cursor: pointer;
+}
+footer .install .row img{
+	border: 1px solid #024843;
+	border-radius: 6px;
+}
+footer .install img{
+	margin: 10px 0 15px 0;
+}
+footer .follow i:hover,
+footer a:hover{
+	color: #088178;
+}
+footer .subsicribe{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color:#fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+footer .subsicribe:hover{
+  background-color: #088178;
+  color: #fff;
+
+}
+.input {
+  max-width: 190px;
+  padding:10px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border: 1.5px solid #898e8b;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: ease 0.25s;
+}
+
+footer .copyright{
+	width: 100%;
+	text-align: center;
+}
+/*============================================= End Footer ======================================= */
+
